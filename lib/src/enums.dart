@@ -10,7 +10,7 @@ enum CustomException {
   String get message => switch (this) {
         CustomException.serverError => 'Server Error',
         CustomException.noInternet => 'No Internet',
-        CustomException.timeOutError => 'Request Time Out',
+        CustomException.timeOutError => 'Time Out',
         CustomException.tokenExpired => 'Token Expired.Please Login',
         CustomException.unknownError => 'Something Went Wrong',
       };

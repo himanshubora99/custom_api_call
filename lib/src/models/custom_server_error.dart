@@ -1,20 +1,10 @@
 class CustomServerError {
-  CustomServerError({
-    required this.error,
-    required this.message,
-  });
+  CustomServerError({required this.message});
 
-  String error;
   String message;
 
   factory CustomServerError.fromMap(Map<String, dynamic> json) =>
-      CustomServerError(
-        error: json['error']?.toString() ?? '',
-        message: json['message'] ?? '',
-      );
+      CustomServerError(message: json['message'] ?? '');
 
-  Map<String, dynamic> toMap() => <String, dynamic>{
-    'error': error,
-    'message': message,
-  };
+  Map<String, dynamic> toMap() => <String, dynamic>{'message': message};
 }
